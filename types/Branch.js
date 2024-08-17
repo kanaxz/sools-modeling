@@ -1,4 +1,4 @@
-const mixer = require('../../../../../core/shared/mixer')
+const mixer = require('sools-core/mixer')
 const VirtualArrayAssociation = require('./VirtualArrayAssociation')
 
 module.exports = class Branch extends VirtualArrayAssociation {

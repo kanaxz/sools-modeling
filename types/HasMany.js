@@ -1,4 +1,4 @@
-const mixer = require('../../../../../core/shared/mixer')
+const mixer = require('sools-core/mixer')
 const { hasMany } = require('../setup')
 const VirtualArrayAssociation = require('./VirtualArrayAssociation')
 module.exports = class HasMany extends mixer.extends(VirtualArrayAssociation, hasMany.before) {

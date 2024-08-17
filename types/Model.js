@@ -1,4 +1,4 @@
-const mixer = require('../../../../../core/shared/mixer')
+const mixer = require('sools-core/mixer')
 const ObjectType = require('./Object')
 const Loadable = require('../mixins/Loadable')
 const setup = require('../setup')

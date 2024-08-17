@@ -1,4 +1,4 @@
-const Tree = require('../../../../../../core/shared/types/Tree')
+const Tree = require('sools-core/types/Tree')
 module.exports = class Methods extends Tree {
   constructor(owner) {
     super()

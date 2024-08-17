@@ -1,4 +1,4 @@
-const mixer = require('../../../../../../core/shared/mixer')
+const mixer = require('sools-core/mixer')
 const Methods = require('./Methods')
 
 module.exports = mixer.mixin((base) => {

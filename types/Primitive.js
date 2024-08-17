@@ -1,4 +1,4 @@
-const mixer = require('../../../../../core/shared/mixer')
+const mixer = require('sools-core/mixer')
 const Real = require('./Real')
 
 module.exports = class Primitive extends mixer.extends(Real) {

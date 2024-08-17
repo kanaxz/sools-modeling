@@ -1,7 +1,7 @@
-const Destroyable = require('../../../../../core/shared/mixins/Destroyable')
-const mixer = require('../../../../../core/shared/mixer')
-const Propertiable = require('../../../../../core/shared/mixins/Propertiable')
-const Equalable = require('../../../../../core/shared/mixins/Equalable')
+const Destroyable = require('sools-core/mixins/Destroyable')
+const mixer = require('sools-core/mixer')
+const Propertiable = require('sools-core/mixins/Propertiable')
+const Equalable = require('sools-core/mixins/Equalable')
 const typeKey = '@type'
 
 const ignore = {}

@@ -1,4 +1,4 @@
-const mixer = require('../../../../../core/shared/mixer')
+const mixer = require('sools-core/mixer')
 const ArrayAssociation = require('./ArrayAssociation')
 const { hasMany } = require('../setup')
 

@@ -5,7 +5,7 @@ const Array = require('./Array')
 const Dynamic = require('./Dynamic')
 const Map = require('./Map')
 const Scope = require('./Scope')
-const { getCommonAncestor } = require('../../../../../core/shared/utils/proto')
+const { getCommonAncestor } = require('sools-core/utils/proto')
 
 class Global extends Virtual {
   getType() {

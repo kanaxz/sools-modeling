@@ -1,4 +1,4 @@
-const mixer = require('../../../../../core/shared/mixer')
+const mixer = require('sools-core/mixer')
 const Bool = require('./Bool')
 const String = require('./String')
 const This = require('./This')

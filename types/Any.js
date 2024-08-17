@@ -1,5 +1,5 @@
-const mixer = require('../../../../../core/shared/mixer')
-const Propertiable = require('../../../../../core/shared/mixins/Propertiable')
+const mixer = require('sools-core/mixer')
+const Propertiable = require('sools-core/mixins/Propertiable')
 
 const Buildable = require('../mixins/Buildable')
 const Templateable = require('../mixins/Templateable')

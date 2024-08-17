@@ -1,7 +1,7 @@
-const Propertiable = require('../../../../../core/shared/mixins/Propertiable')
-const mixer = require('../../../../../core/shared/mixer')
+const Propertiable = require('sools-core/mixins/Propertiable')
+const mixer = require('sools-core/mixer')
 const { String } = require('../types')
-const proto = require('../../../../../core/shared/utils/proto')
+const proto = require('sools-core/utils/proto')
 
 
 module.exports = mixer.mixin([Propertiable], (baseClass) => {

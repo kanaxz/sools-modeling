@@ -1,7 +1,7 @@
-const mixer = require('../../../../../core/shared/mixer')
+const mixer = require('sools-core/mixer')
 const loadingQueue = '@loadingQueue'
 const stateKey = '@loadState'
-const Propertiable = require('../../../../../core/shared/mixins/Propertiable')
+const Propertiable = require('sools-core/mixins/Propertiable')
 const Bool = require('../types/Bool')
 const setup = require('../setup')
 

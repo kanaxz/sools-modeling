@@ -1,5 +1,5 @@
-const mixer = require('../../../../../../core/shared/mixer')
-const Equalable = require('../../../../../../core/shared/mixins/Equalable')
+const mixer = require('sools-core/mixer')
+const Equalable = require('sools-core/mixins/Equalable')
 const Indexes = require('./Indexes')
 
 module.exports = mixer.mixin([Equalable], (base) => {

@@ -1,4 +1,4 @@
-const mixer = require('../../../../../core/shared/mixer');
+const mixer = require('sools-core/mixer');
 const Controllers = require('./Controllers')
 const ControllerError = require('./ControllerError')
 const setup = require('../setup')

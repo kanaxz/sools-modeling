@@ -1,5 +1,5 @@
-const BaseArray = require('../../../../../core/shared/types/Array')
-const mixer = require('../../../../../core/shared/mixer')
+const BaseArray = require('sools-core/types/Array')
+const mixer = require('sools-core/mixer')
 const utils = require('../utils')
 const Any = require('./Any')
 const Function = require('./Function')
