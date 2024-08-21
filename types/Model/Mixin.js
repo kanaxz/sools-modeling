@@ -1,9 +1,9 @@
 const mixer = require('sools-core/mixer')
-const Bool = require('./Bool')
-const String = require('./String')
-const This = require('./This')
-const Any = require('./Any')
-const Indexable = require('../mixins/Indexable')
+const Bool = require('../primitives/Bool')
+const String = require('../primitives/String')
+const This = require('../This')
+const Any = require('../Any')
+const Indexable = require('../../mixins/Indexable')
 
 module.exports = mixer.mixin([Any, Indexable], (base) => {
   return class ModelMixin extends base { }

@@ -1,9 +1,9 @@
 const mixer = require('sools-core/mixer')
-const ObjectType = require('./Object')
-const Loadable = require('../mixins/Loadable')
-const setup = require('../setup')
-const ModelMixin = require('./ModelMixin')
-const { objectToFilter } = require('../processing/utils')
+const ObjectType = require('../Object')
+const Loadable = require('../../mixins/Loadable')
+const setup = require('../../setup')
+const ModelMixin = require('./Mixin')
+const { objectToFilter } = require('../../processing/utils')
 const config = setup.model
 
 

@@ -1,4 +1,4 @@
-const String = require('./String')
+const String = require('./primitives/String')
 
 module.exports = class Markdown extends String {
 

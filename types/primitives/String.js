@@ -1,7 +1,6 @@
 const Primitive = require('./Primitive')
-const utils = require('../utils')
 const Bool = require('./Bool')
-const Object = require('./Object')
+const Object = require('../Object')
 
 class String extends Primitive {
   static parse(value, owner, property) {

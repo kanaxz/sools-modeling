@@ -1,5 +1,5 @@
 const Virtual = require('./Virtual')
-const Bool = require('./Bool')
+const Bool = require('./primitives/Bool')
 const Any = require('./Any')
 const Array = require('./Array')
 const Dynamic = require('./Dynamic')

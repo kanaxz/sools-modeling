@@ -1,4 +1,4 @@
-const Bool = require('../../../types/Bool')
+const Bool = require('../../../types/primitives/Bool')
 
 module.exports = {
   for: Bool,

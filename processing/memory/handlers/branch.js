@@ -1,4 +1,4 @@
-const Branch = require('../../../types/Branch')
+const Branch = require('../../../../../tree/shared/Branch')
 
 module.exports = {
   for: Branch,

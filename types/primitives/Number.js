@@ -1,5 +1,4 @@
 const Primitive = require('./Primitive')
-const utils = require('../utils')
 
 class Number extends Primitive {
   static parse(value, owner, property) {

@@ -2,7 +2,7 @@ const mixer = require('sools-core/mixer')
 const loadingQueue = '@loadingQueue'
 const stateKey = '@loadState'
 const Propertiable = require('sools-core/mixins/Propertiable')
-const Bool = require('../types/Bool')
+const Bool = require('../types/primitives/Bool')
 const setup = require('../setup')
 
 const Loadable = mixer.mixin([Propertiable], (base) => {

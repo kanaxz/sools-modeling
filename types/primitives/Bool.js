@@ -1,7 +1,7 @@
 const Primitive = require('./Primitive')
-const Real = require('./Real')
-const This = require('./This')
-const Array = require('./Array')
+const Real = require('../Real')
+const This = require('../This')
+const Array = require('../Array')
 
 class Bool extends Primitive {
   static parse(value, owner, property) {
