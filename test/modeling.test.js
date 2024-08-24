@@ -1,5 +1,3 @@
-require('sools-core/setup')
-
 const { expect, assert } = require('chai')
 const { Object, String } = require('../types')
 
