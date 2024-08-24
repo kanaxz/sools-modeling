@@ -1,4 +1,4 @@
-const Primitive = require('../../../types/Primitive')
+const Primitive = require('../../../types/primitives/Primitive')
 
 module.exports = {
   for: Primitive,

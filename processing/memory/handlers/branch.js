@@ -1,4 +1,4 @@
-const Branch = require('../../../../../tree/shared/Branch')
+const Branch = require('sools-modeling-tree/Branch')
 
 module.exports = {
   for: Branch,
