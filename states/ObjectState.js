@@ -1,5 +1,5 @@
 const State = require('./State')
-const { ArrayAssociation, Model, Primitive } = require('../types')
+const { ArrayAssociation, Model, Primitive, Number } = require('../types')
 const ModelState = require('./ModelState')
 const ignore = ['_id']
 
@@ -8,6 +8,7 @@ const getState = (context, property) => {
 }
 
 const mapping = [
+  [Number, require('./Number')],
   [Primitive, State],
   [Model, ModelState],
 ]

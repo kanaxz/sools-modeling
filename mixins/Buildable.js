@@ -59,26 +59,6 @@ const Buildable = mixer.mixin([Destroyable, Propertiable, Equalable], (base) => 
 
       super.setPropertyValue(property, parsedValue)
     }
-
-
-
-    toJSON(paths = {}, context = null) {
-      const values = Object.entries(this)
-        .reduce((acc, [k, v]) => {
-          const property = this.constructor.properties.find((p) => p.name === k)
-          if (!property || (property.context !== undefined && property.context !== context)) {
-            return acc
-          }
-
-          const result = property.type.toJSON(v, paths && paths[property.name] || null, context)
-          if (result !== undefined) {
-            acc[property.name] = result
-          }
-          return acc
-        }, {})
-
-      return values
-    }
   }
 })
 

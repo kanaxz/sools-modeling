@@ -1,6 +1,6 @@
 {
  "name": "sools-modeling",
- "version": "1.17.0",
+ "version": "1.18.0",
  "description": "",
  "main": "index.js",
  "scripts": {
@@ -9,8 +9,8 @@
  "author": "",
  "license": "ISC",
  "dependencies": {
-  "sools-core": "^1.15.0",
-  "sools-modeling-tree": "^1.3.0"
+  "sools-core": "^1.16.0",
+  "sools-modeling-tree": "^1.4.0"
  },
  "devDependencies": {
   "chai": "^4.3.10",
