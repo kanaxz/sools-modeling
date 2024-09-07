@@ -5,9 +5,8 @@ const setup = require('../../setup')
 const ModelMixin = require('./Mixin')
 const { objectToFilter } = require('../../processing/utils')
 const config = setup.model
-
-
-class BaseModel extends mixer.extends(ObjectType, [ModelMixin, Loadable, ...config.before]) {
+const Controlleable = require('../../controlling/Controlleable')
+class BaseModel extends mixer.extends(ObjectType, [Controlleable, ModelMixin, Loadable, ...config.before]) {
 
   setPathsState(state, paths, err) {
     for (const [propertyName, value] of Object.entries(paths)) {

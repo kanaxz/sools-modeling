@@ -13,8 +13,6 @@ module.exports = {
   Array: require('./Array'),
   HasMany: require('./HasMany'),
   ArrayAssociation: require('./ArrayAssociation'),
-  Markdown: require('./Markdown'),
-  Password: require('./Password'),
   OwnMany: require('./OwnMany'),
   Vector2D: require('./Vector2D')
 }

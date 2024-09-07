@@ -1,4 +1,4 @@
-const String = require('./primitives/String')
+const String = require('./String')
 
 module.exports = class Password extends String {
 

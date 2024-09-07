@@ -17,7 +17,7 @@ const Buildable = mixer.mixin([Destroyable, Propertiable, Equalable], (base) => 
         acc[property.name] = undefined
         return acc
       }, {})
-      this.set({
+      Object.assign(this, {
         ...undefinedValues,
         ...values,
         '@type': this.constructor.definition.name,
@@ -57,7 +57,7 @@ const Buildable = mixer.mixin([Destroyable, Propertiable, Equalable], (base) => 
       const parsedValue = property.type.parse(value, options, { owner: this, property })
       if (parsedValue === ignore) { return }
 
-      super.setPropertyValue(property, parsedValue)
+      return super.setPropertyValue(property, parsedValue)
     }
   }
 })

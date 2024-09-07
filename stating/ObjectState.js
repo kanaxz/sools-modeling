@@ -1,33 +1,20 @@
 const State = require('./State')
-const { ArrayAssociation, Model, Primitive, Number } = require('../types')
-const ModelState = require('./ModelState')
+const ArrayAssociation = require('../types/ArrayAssociation')
 const ignore = ['_id']
 
 const getState = (context, property) => {
   return (typeof property.state === 'function') ? property.state(context, property) : property.state || {}
 }
 
-const mapping = [
-  [Number, require('./Number')],
-  [Primitive, State],
-  [Model, ModelState],
-]
-
-const getStateType = (type) => {
-  const pair = mapping.find(([t]) => t === type || type.prototype instanceof t)
-  if (!pair) { return null }
-  return pair[1]
-}
-
-class ObjectState extends State {
+module.exports = class ObjectState extends State {
   constructor(values) {
     super(values)
     this.on('propertyChanged:value', this.b(this.onValueChanged))
     this.onValueChanged()
-    this.updateStates()
   }
 
   onValueChanged() {
+    this.updateStates()
     if (!this.value) { return }
     this.on(this.value, 'propertyChanged', this.b(this.onChildValueChanged))
   }
@@ -48,8 +35,12 @@ class ObjectState extends State {
     await state.valueChanged()
   }
 
+  get currentType() {
+    return this.value?.constructor || this.property.type
+  }
+
   updateStates() {
-    this.states = this.property.type.properties
+    this.states = this.currentType.properties
       .filter((p) => {
         const shouldIgnore = ignore.indexOf(p.name) !== -1
         if (shouldIgnore) { return false }
@@ -58,7 +49,7 @@ class ObjectState extends State {
         return true
       })
       .reduce((acc, property) => {
-        const stateType = getStateType(property.type)
+        const stateType = property.type.stateType
         acc[property.name] = new stateType({
           objectState: this,
           property,
@@ -88,9 +79,7 @@ class ObjectState extends State {
 
 
 }
-ObjectState
-  .define()
+  .define({
+    name: 'ObjectState'
+  })
 
-mapping.push([Object, ObjectState])
-
-module.exports = ObjectState

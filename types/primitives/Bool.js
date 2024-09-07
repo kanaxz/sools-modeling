@@ -4,6 +4,11 @@ const This = require('../This')
 const Array = require('../Array')
 
 class Bool extends Primitive {
+
+  static default() {
+    return false
+  }
+
   static parse(value, owner, property) {
     if (value == null) { return value }
     if (typeof value !== 'boolean') {

@@ -1,6 +1,6 @@
-const Primitive = require('./Primitive')
-const Bool = require('./Bool')
-const Object = require('../Object')
+const Primitive = require('../Primitive')
+const Bool = require('../Bool')
+const Object = require('../../Object')
 
 class String extends Primitive {
   static parse(value, owner, property) {
@@ -24,6 +24,20 @@ String
     match: [[String], Bool],
     toUpperCase: [[], String]
   })
+  .state((State) =>
+    State
+      .properties({
+        values: 'any'
+      })
+      .validators((state) => {
+        const { values, value } = state
+        if (!values) { return }
+
+        if (values.indexOf(value) === -1) {
+          throw new Error(`Valut not recognized`)
+        }
+      })
+  )
 
 Object.properties({
   '@type': String
